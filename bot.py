@@ -23,7 +23,7 @@ greeting_keywords = ["hi", "hello", "hey", "yo", "namaste"]
 def get_together_response(prompt):
     try:
         response = client.chat.completions.create(
-            model="Qwen/Qwen3-235B-A22B-fp8-tput",
+            model="meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
             messages=[
                 {
                     "role": "system",
@@ -57,7 +57,7 @@ async def handle_message(update: Update, context):
 
     # 1. Always reply to "hi", "hello", etc.
     if text in greeting_keywords:
-        await context.bot.send_message(chat_id=chat_id, text="Hello bhai 👋 kya haal chaal?")
+        await context.bot.send_message(chat_id=chat_id, text="Hello👋kya hal chal ")
         return
 
     # 2. Only respond if someone replied to the bot
