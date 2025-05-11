@@ -23,7 +23,7 @@ greeting_keywords = ["hi", "hello", "hey", "yo", "namaste"]
 def get_together_response(prompt):
     try:
         response = client.chat.completions.create(
-            model="meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+            model="Qwen/Qwen3-235B-A22B-fp8-tput",
             messages=[
                 {
                     "role": "system",
