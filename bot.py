@@ -41,7 +41,7 @@ def get_together_response(prompt):
         reply = re.sub(r"<think>.*?</think>", "", reply, flags=re.DOTALL)
 
         # If reply too long for a simple prompt, cut it
-        if len(reply.split()) > 80 and not any(q in prompt.lower() for q in ["explain", "what is", "tell me", "kaise", "kyu", "kyon", "bata"]):
+        if len(reply.split()) > 150 and not any(q in prompt.lower() for q in ["explain", "what is", "tell me", "kaise", "kyu", "kyon", "bata"]):
             reply = "Bhai seedhi baat bata 😅 chhota sawaal chhota jawaab."
 
         return reply
